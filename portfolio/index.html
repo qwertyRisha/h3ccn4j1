@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whoami?h3ccn4j1</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="matrix-grid"></div>
+        <div id="popups-container" class="popups-container"></div>
+
+        <div id="ransomware-box" class="ransomware-box hidden">
+            <div class="ransomware-header">
+                <span class="warning-icon">⚠️</span>
+                <span>SYSTEM ENCRYPTION NOTICE</span>
+            </div>
+            <div class="ransomware-body">
+                <div class="lock-icon">🔒</div>
+                <h2>YOUR FILES HAVE BEEN ENCRYPTED!</h2>
+                <p>All your documents, photos, databases, and critical files are locked. The decryption key will be destroyed in:</p>
+                <div class="timer" id="timer">00:00:39</div>
+                <button class="btn-decrypt" id="decrypt-btn">DECRYPT FILES NOW</button>
+            </div>
+        </div>
+
+        <div id="terminal-screen" class="terminal-screen hidden">
+            <div class="terminal-content">
+                <p class="type-line" id="line1"></p>
+                <p class="type-line" id="line2"></p>
+                <p class="type-line highlight-line" id="line3"></p>
+            </div>
+        </div>
+
+        <button id="skip-btn" class="skip-btn">Skip Intro &gt;&gt;</button>
+    </div>
+
+    <canvas id="matrixCanvas"></canvas>
+    <div class="crt-overlay"></div>
+
+    <div class="container">
+
+        <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">h3ccn4j1@cyb3rs3c:~#</span>
+            <button id="cli-trigger" class="cli-toggle-btn">[LAUNCH CLI]</button>
+        </div>
+
+        <header class="site-header">
+            <div class="header-copy">
+                <h1 class="glitch" data-text="> hi, I'm h3ccn4j1_">> hi, I'm h3ccn4j1_</h1>
+                <p class="subtitle">// WEB PENETRATION TESTER | FULL-STACK DEVELOPER | IT SUPPORT</p>
+                
+                <nav class="top-nav" aria-label="Main navigation">
+                    <button class="nav-btn active" data-target="home">HOME</button>
+                    <button class="nav-btn" data-target="experience">EXPERIENCE</button>
+                    <button class="nav-btn" data-target="projects">PROJECTS</button>
+                    <button class="nav-btn" data-target="writeups">WRITEUPS</button>
+                    <button class="nav-btn" data-target="certs">CERTS</button>
+                    <button class="nav-btn" data-target="skills">SKILLS</button>
+                </nav>
+            </div>
+
+            <div class="profile-visual" aria-label="Profile portrait">
+                <div class="profile-image-frame">
+                    <img src="assets/hecc.jpg" alt="h3ccn4j1 profile portrait">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="content-section active">
+                <h2 class="section-title">// w h o a m i ?</h2>
+                <p class="typewriter-text">Hi. I am JHELIANE IRISH M. LLORERA, known as h3ccn4j1. I am a cybersecurity professional specializing in web application penetration testing, vulnerability assessments, security operations, and full-stack web development.</p>
+                
+                <div class="terminal-box">
+                    <p class="code-line"><span class="prompt">root@h3ccn4j1:~$</span> status --check</p>
+                    <p class="output-green">&gt; STATUS: ONLINE</p>
+                    <p class="code-line"><span class="prompt">root@h3ccn4j1:~$</span> get-credentials</p>
+                    <p class="output-cyan">&gt; CERTIFICATIONS: CWPT | CCP | Google IT Support</p>
+                    <p class="code-line"><span class="prompt">root@h3ccn4j1:~$</span> get-education</p>
+                    <p class="output-cyan">&gt; EDUCATION: Master in Information Technology (Mapúa University) | BS in Information Technology (City College of Calamba)</p>
+                </div>
+            </section>
+
+            <section id="experience" class="content-section">
+                <h2 class="section-title">// PROFESSIONAL_EXPERIENCE_</h2>
+                <div class="clickable-card card card-cyber" data-target="experience" data-title="CMS Deployment & Hardening" data-description="Streamlined institutional web operations by deploying a Content Management System (CMS), centralizing admin updates, and hardening web resource access. Built automated chatbot features, virtual tours, and user control systems.">
+                    <div class="card-header">ROLE: Programmer | City College of Calamba (Sept 2025 - May 2026)</div>
+                    <h3>City College of Calamba Website Development</h3>
+                    <p class="typewriter-text">> Developed a Content Management System (CMS). Built automated chatbot features, virtual tours, and user control systems.</p>
+                </div>
+                <div class="clickable-card card" data-target="experience" data-title="Operational & IT Support" data-description="Managed documentation and claims processing, providing administrative and technical support while ensuring timely workflow resolution.">
+                    <div class="card-header">ROLE: Support Officer | Tiger Claims Management (March 2023 - May 2023)</div>
+                    <h3>Support Claims Officer</h3>
+                    <p class="typewriter-text">Managed documentation and claims processing, providing administrative and technical support while ensuring timely workflow resolution.</p>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section">
+                <h2 class="section-title">// PROJECTS_</h2>
+                <div class="project-grid">
+                    <div class="clickable-card project-card" data-image="assets/julies.png" data-title="SCM_AI_REC" data-description="A full-stack storefront and SCM system with AI-powered image recognition, inventory tracking, and order monitoring for Julie's RTW Shop.">
+                        <img src="assets/julies.png" alt="SCM AI project preview">
+                        <div class="card-header">PROJECT_ID: JULIE'S RTW SHOP</div>
+                        <h3>Digital Storefront & SCM System with AI Image Rec</h3>
+                        <p class="typewriter-text">Engineered a full-stack web storefront for Julie's RTW Shop using Python and TensorFlow. Integrated AI-powered image recognition for automated product recommendations.</p>
+                    </div>
+                    <div class="clickable-card project-card" data-image="assets/ercms.png" data-title="E_REKLAMO" data-description="A complaint management platform with user authentication, secure status tracking, and database administration for public service reporting.">
+                        <img src="assets/ercms.png" alt="E-Reklamo project preview">
+                        <div class="card-header">PROJECT_ID: E_REKLAMO</div>
+                        <h3>E-Reklamo Complaint Management System</h3>
+                        <p class="typewriter-text">Built a web-based complaint management application supporting user authentication, secure tracking status, and database administration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="writeups" class="content-section">
+                <h2 class="section-title">// WRITEUPS_</h2>
+                <div class="project-grid">
+                    <a href="https://qwertyrisha.blogspot.com/2021/01/htb-make-invite-code-with-qwertyrisha.html" target="_blank" class="clickable-card card project-card" style="text-decoration: none; color: inherit; display: flex;">
+                        <div class="card-header">TOPIC: HTB WRITEUP</div>
+                        <h3>HTB — Make Invite Code</h3>
+                        <p class="typewriter-text">A walkthrough on the Make challenge from Hack The Box, written by qwertyrisha, covering the exploit path and solution details.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section id="certs" class="content-section">
+                <h2 class="section-title">// CREDENTIALS_&_CERTS_</h2>
+                <div class="cert-grid">
+                    <div class="clickable-card cert-card" data-image="assets/cwpt.png" data-title="CWPT" data-description="Certified Web Penetration Tester — Appkademiya (2026)">
+                        <img src="assets/cwpt.png" alt="CWPT certificate preview">
+                        <p class="typewriter-text">&gt; Certified Web Penetration Tester (CWPT) — Appkademiya (2026)</p>
+                    </div>
+                    <div class="clickable-card cert-card" data-image="assets/ccp.png" data-title="CCP" data-description="Certified Cybersecurity Professional — Appkademiya (2026)">
+                        <img src="assets/ccp.png" alt="CCP certificate preview">
+                        <p class="typewriter-text">&gt; Certified Cybersecurity Professional (CCP) — Appkademiya (2026)</p>
+                    </div>
+                    <div class="clickable-card cert-card" data-image="assets/it_support.jpeg" data-title="Google IT Support" data-description="Google IT Support Professional Certificate — Google (2026)">
+                        <img src="assets/it_support.jpeg" alt="Google IT certificate preview">
+                        <p class="typewriter-text">&gt; Google IT Support Professional Certificate — Google (2026)</p>
+                    </div>
+                    <div class="clickable-card cert-card" data-image="assets/cpps.jpeg" data-title="Google IT Support" data-description="Certified Phishing Prevention Specialist -Hack&Fix (2025)">
+                        <img src="assets/cpps.jpeg" alt="Google IT certificate preview">
+                        <p class="typewriter-text">&gt; Certified Phishing Prevention Specialist -Hack & Fix (2025)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="content-section">
+                <h2 class="section-title">// CORE_COMPETENCIES_</h2>
+                <div class="card">
+                    <p class="output-green"><strong>Security & Diagnostics:</strong> Wireshark, Nmap, Burp Suite, Syslog Analysis</p>
+                    <p class="output-cyan"><strong>Languages:</strong> Python, PHP, JavaScript, SQL/MySQL, C, C++, HTML/CSS</p>
+                    <p class="output-green"><strong>Frameworks & Tools:</strong> TensorFlow, OWASP Top 10, ServiceNow, Zendesk, Jira</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-status">SYSTEM_STATUS: SECURE</div>
+            <p>
+                EMAIL: <a href="mailto:whoami_h3ccn4j1@proton.me">whoami.h3ccn4j1@proton.me</a> | 
+                LINKEDIN: <a href="https://www.linkedin.com/in/jheliane-irish-llorera-640305240/" target="_blank">Jheliane Irish Llorera</a>
+            </p>
+        </footer>
+    </div>
+
+    <div id="cli-modal" class="cli-modal hidden">
+        <div class="cli-header">
+            <span>INTERACTIVE_SHELL v1.0 (Type 'help' for commands, 'exit' to close)</span>
+            <span id="cli-close" class="cli-close">[X]</span>
+        </div>
+        <div id="cli-output" class="cli-output">
+            <p>Welcome to h3ccn4j1 Terminal CLI</p>
+            <p>Type <span class="highlight">'help'</span> to see available commands.</p>
+        </div>
+        <div class="cli-input-row">
+            <span class="prompt">h3ccn4j1@cyb3rs3c:~$</span>
+            <input type="text" id="cli-input" autofocus autocomplete="off" spellcheck="false">
+        </div>
+    </div>
+
+    <div id="imageModal" class="image-modal hidden" aria-modal="true" role="dialog">
+        <div class="image-modal-content">
+            <button id="imageModalClose" class="image-modal-close" aria-label="Close preview">[X]</button>
+            <img id="modalImage" src="" alt="Preview">
+            <div class="image-modal-copy">
+                <h3 id="modalTitle">Preview</h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
