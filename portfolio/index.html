@@ -11,53 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="intro-overlay" class="intro-overlay">
-        <div class="matrix-grid"></div>
-        <div id="popups-container" class="popups-container"></div>
-
-        <div id="ransomware-box" class="ransomware-box hidden">
-            <div class="ransomware-header">
-                <span class="warning-icon">⚠️</span>
-                <span>SYSTEM ENCRYPTION NOTICE</span>
-            </div>
-            <div class="ransomware-body">
-                <div class="lock-icon">🔒</div>
-                <h2>YOUR FILES HAVE BEEN ENCRYPTED!</h2>
-                <p>All your documents, photos, databases, and critical files are locked. The decryption key will be destroyed in:</p>
-                <div class="timer" id="timer">00:00:39</div>
-                <button class="btn-decrypt" id="decrypt-btn">DECRYPT FILES NOW</button>
-            </div>
-        </div>
-
-        <div id="terminal-screen" class="terminal-screen hidden">
-            <div class="terminal-content">
-                <p class="type-line" id="line1"></p>
-                <p class="type-line" id="line2"></p>
-                <p class="type-line highlight-line" id="line3"></p>
-            </div>
-        </div>
-
-        <button id="skip-btn" class="skip-btn">Skip Intro &gt;&gt;</button>
-    </div>
 
     <canvas id="matrixCanvas"></canvas>
     <div class="crt-overlay"></div>
 
     <div class="container">
 
-        <div class="terminal-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title">h3ccn4j1@cyb3rs3c:~#</span>
-            <button id="cli-trigger" class="cli-toggle-btn">[LAUNCH CLI]</button>
-        </div>
-
         <header class="site-header">
             <div class="header-copy">
                 <h1 class="glitch" data-text="> hi, I'm h3ccn4j1_">> hi, I'm h3ccn4j1_</h1>
-                <p class="subtitle">// WEB PENETRATION TESTER | FULL-STACK DEVELOPER | IT SUPPORT</p>
+                <p class="subtitle">// WEB PENETRATION TESTER</p>
                 
                 <nav class="top-nav" aria-label="Main navigation">
                     <button class="nav-btn active" data-target="home">HOME</button>
@@ -68,12 +31,12 @@
                     <button class="nav-btn" data-target="skills">SKILLS</button>
                 </nav>
             </div>
-
+        </header>
 
         <main>
             <section id="home" class="content-section active">
                 <h2 class="section-title">// w h o a m i ?</h2>
-                <p class="typewriter-text">Hi. I am JHELIANE IRISH M. LLORERA, known as h3ccn4j1. I am a cybersecurity professional specializing in web application penetration testing, vulnerability assessments, security operations, and full-stack web development.</p>
+                <p class="typewriter-text">Hi. I am JHELIANE IRISH M. LLORERA, known as h3ccn4j1. A DICT-recognized Cybersecurity Professional and Web Penetration Tester specializing in web application security, vulnerability assessments, and threat analysis. With hands-on experience in offensive security tools like Burp Suite, Wireshark, Splunk. and Wazuh SIEM, I am passionate about securing web applications, APIs, and network infrastructures against evolving cyber threats.</p>
                 
                 <div class="terminal-box">
                     <p class="code-line"><span class="prompt">root@h3ccn4j1:~$</span> status --check</p>
@@ -131,6 +94,10 @@
             <section id="certs" class="content-section">
                 <h2 class="section-title">// CREDENTIALS_&_CERTS_</h2>
                 <div class="cert-grid">
+                    <div class="clickable-card cert-card" data-image="assets/dict-cyberpro-badge.png" data-title="DICT Cybersecurity Professional Badge" data-description="Verify here: https://cyberpro.dict.gov.ph/">
+                        <img src="assets/dict-cyberpro-badge.png" alt="QR-CODE-DICT">
+                        <p class="typewriter-text">&gt; DICT Cybersecurity Professional Badge</p>
+                    </div>
                     <div class="clickable-card cert-card" data-image="assets/cwpt.png" data-title="CWPT" data-description="Certified Web Penetration Tester — Appkademiya (2026)">
                         <img src="assets/cwpt.png" alt="CWPT certificate preview">
                         <p class="typewriter-text">&gt; Certified Web Penetration Tester (CWPT) — Appkademiya (2026)</p>
@@ -201,5 +168,6 @@
     
 
     <script src="script.js"></script>
+
 </body>
 </html>

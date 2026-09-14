@@ -1,34 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     let audioCtx = null;
-    
-    function playBeep(freq = 600, duration = 0.03) {
-        try {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-            gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-            osc.start();
-            osc.stop(audioCtx.currentTime + duration);
-        } catch (e) {
-        }
-    }
+
     const buttons = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.content-section');
 
     buttons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            playBeep(800, 0.04);
             const target = button.getAttribute('data-target');
 
             buttons.forEach(btn => btn.classList.remove('active'));
@@ -279,6 +257,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImage.style.display = 'block';
                 modalImage.src = image;
                 modalImage.alt = title;
+                modalImage.style.objectFit = 'contain';
+                modalImage.style.maxWidth = 'none';
+                modalImage.style.maxHeight = '80vh';
+                modalImage.style.width = 'auto';
+                modalImage.style.height = 'auto';
             } else {
                 modalImage.style.display = 'none';
                 modalImage.src = '';
@@ -345,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cliInput) {
         cliInput.addEventListener('keydown', (e) => {
-            playBeep(400, 0.02);
             if (e.key === 'Enter') {
                 const cmd = cliInput.value.trim();
                 printCLIResponse(`h3ccn4j1@cyb3rs3c:~$ ${cmd}`, '#38bdf8');
